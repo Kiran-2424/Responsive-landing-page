@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cars - DriveX</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Drive<span>X</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cars.html">Cars</a>
+      <a href="bike.html">Bikes</a>
+      <a href="hypercar.html">Hypercars</a>
+      <a href="#" onclick="openCart()">🛒 Cart</a>
+    </nav>
+  </header>
+
+  <section class="shop-section">
+    <h2>Our Car Models</h2>
+    <div class="products">
+      <div class="product">
+        <img src="img/bmw cart.webp" alt="Car 1">
+        <h3>Car Model A</h3>
+        <p>₹10,00,000</p>
+        <button onclick="addToCart('Car Model A', 1000000)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="img/mercerdise cart.jpeg" alt="Car 2">
+        <h3>Car Model B</h3>
+        <p>₹12,50,000</p>
+        <button onclick="addToCart('Car Model B', 1250000)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CART + FOOTER -->
+  <div id="cartModal" class="cart-modal">
+    <div class="cart-content">
+      <span class="close" onclick="closeCart()">&times;</span>
+      <h2>Your Cart</h2>
+      <ul id="cartItems"></ul>
+      <p>Total: ₹<span id="totalPrice">0</span></p>
+      <button onclick="checkout()">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <section>
+        <h3>About Us</h3>
+        <p>Wide selection of cars tailored for your lifestyle.</p>
+      </section>
+      <section>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="cars.html">Cars</a></li>
+          <li><a href="bike.html">Bikes</a></li>
+          <li><a href="hypercar.html">Hypercars</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Contact</h3>
+        <p>support@drivex.com</p>
+      </section>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 DriveX. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

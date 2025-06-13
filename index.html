@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DriveX - Home</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Drive<span>X</span></div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="cars.html">Cars</a>
+      <a href="bike.html">Bikes</a>
+      <a href="hypercar.html">Hypercars</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#" onclick="openCart()">🛒 Cart</a>
+    </nav>
+  </header>
+
+  <!-- SLIDER SECTION -->
+  <section class="slider" id="home">
+    <div class="slides" id="slides">
+      <img src="img/lembo.avif" alt="Slide 1">
+      <img src="img/bmw.avif" alt="Slide 2">
+      <img src="img/777.jpg" alt="Slide 3">
+      <img src="img/ducati.avif" alt="Slide 4">
+    </div>
+    <button class="control prev" onclick="prevSlide()">❮</button>
+    <button class="control next" onclick="nextSlide()">❯</button>
+    <div class="hero-content">
+      <h1>Welcome to DriveX</h1>
+      <p>Explore your dream vehicles today.</p>
+      <a href="cars.html" class="btn">Explore Cars</a>
+    </div>
+  </section>
+
+  <!-- CART MODAL -->
+  <div id="cartModal" class="cart-modal">
+    <div class="cart-content">
+      <span class="close" onclick="closeCart()">&times;</span>
+      <h2>Your Cart</h2>
+      <ul id="cartItems"></ul>
+      <p>Total: ₹<span id="totalPrice">0</span></p>
+      <button onclick="checkout()">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="about">
+    <div class="footer-content">
+      <section>
+        <h3>About Us</h3>
+        <p>DriveX brings you the finest selection of cars, bikes, and hypercars tailored for every enthusiast.</p>
+      </section>
+      <section>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="cars.html">Cars</a></li>
+          <li><a href="bike.html">Bikes</a></li>
+          <li><a href="hypercar.html">Hypercars</a></li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h3>Contact Us</h3>
+        <p>Email: support@drivex.com</p>
+        <p>Phone: +91 123 456 7890</p>
+      </section>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 DriveX. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
